@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    &lt;!&ndash; <RelativeLayout
+          android:layout_marginTop="15dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/toolbar">
+          <EditText
+             android:background="@drawable/rounded_corner"
+             android:id="@+id/inputSearch"
+             android:layout_width="match_parent"
+             android:layout_height="40dp"
+             android:drawableLeft="@drawable/search_img"
+             android:hint="@string/search_prod"
+             android:inputType="textVisiblePassword"
+             android:layout_marginLeft="10dp"
+             android:padding="5dp"
+             android:textSize="20sp"
+             android:layout_marginRight="10dp"/>
+      </RelativeLayout>&ndash;&gt;
+</androidx.constraintlayout.widget.ConstraintLayout>
+-->
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          tools:context=".MainActivity">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/deliver_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delivering_to"
+                android:layout_marginTop="5dp"
+                />
+            <TextView
+                android:id="@+id/current_loc"
+                android:layout_below="@+id/deliver_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/current_loc"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+            <ImageView
+                android:layout_below="@+id/deliver_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/current_loc"
+                android:src="@drawable/expand_img"
+                />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="90dp">
+        </FrameLayout>
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bar"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_gravity="bottom"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/colorPrimaryDark"
+                tools:ignore="BottomAppBar" />
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/bottom_navigation" />
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>

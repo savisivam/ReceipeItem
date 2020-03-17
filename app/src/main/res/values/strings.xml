@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ReceipeItem</string>
+    <string name="delivering_to">Delivering to</string>
+    <string name="current_loc">Current Location </string>
+    <string name="search_prod">Search for Cuisines,Receipes.... </string>
+    <string name="view_cart">Cart </string>
+    <string name="home_page">Home </string>
+    <string name="category_page">Category</string>
+
+</resources>
